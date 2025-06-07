@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
 
@@ -119,4 +119,24 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+.flex-center {
+  @apply flex items-center justify-center;
+}
+
+.flex-center-col {
+  @apply flex items-center justify-center flex-col;
+}
+
+.min-h-main {
+  @apply min-h-[calc(100dvh-100px)];
+}
+
+.full-center {
+  @apply flex flex-col items-center justify-center min-h-[calc(100dvh-100px)];
+}
+
+.text-xxs {
+  @apply text-[10px];
 }
