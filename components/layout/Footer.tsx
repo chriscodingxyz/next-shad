@@ -4,7 +4,7 @@ import { Badge } from '@/components/ui/badge'
 
 export default function Footer () {
   return (
-    <footer className='bg-background flex justify-between items-center h-[30px] px-4 border-t border-border'>
+    <footer className=' flex justify-between items-center h-[30px] px-4 border-t border-border'>
       <div className='flex items-center gap-3'>
         <Badge variant='secondary' className='text-xs'>
           v0.1.0

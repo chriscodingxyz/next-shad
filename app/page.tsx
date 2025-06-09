@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Home () {
   return (
-    <div className='min-h-main flex-center-col'>
+    <div className={`min-h-main flex-center-col`}>
       {/* <Image
         src='/images/cryptoadz.gif'
         height={100}
