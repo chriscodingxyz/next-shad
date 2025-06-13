@@ -24,7 +24,7 @@ export default function Error ({
         alt='This is fine'
         className='self-center dark:invert'
       />
-      <p className='text-[10px]'>something went wrong</p>
+      <p className='text-sm text-muted-foreground'>something went wrong</p>
       <BackButton fixed />
     </div>
   )

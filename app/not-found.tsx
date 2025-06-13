@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function NotFound () {
   return (
-    <div className='full-center'>
+    <div className='full-center space-y-4'>
       <h1 className='text-7xl font-black'>404</h1>
       <Image
         src='/images/psyduck.png'
@@ -14,7 +14,7 @@ export default function NotFound () {
         alt='This is fine'
         className='self-center dark:invert'
       />
-      <p className='text-[10px]'>page not found</p>
+      <p className='text-sm text-muted-foreground'>page not found</p>
       <BackButton fixed />
     </div>
   )
