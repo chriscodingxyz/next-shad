@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Silkscreen, Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -23,6 +23,16 @@ export const metadata: Metadata = {
   description: 'Minimal Simple Template to get started'
 }
 
+const silkScreen = Silkscreen({
+  variable: '--font-silkscreen',
+  weight: ['400', '700'],
+  subsets: ['latin']
+})
+
+const inter = Inter({
+  variable: '--font-inter'
+})
+
 export default function RootLayout ({
   children
 }: Readonly<{
@@ -31,7 +41,7 @@ export default function RootLayout ({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-[100dvh] antialiased text-xs`}
+        className={`${geistSans.variable} ${geistMono.variable} ${silkScreen.variable} ${inter.variable} font-inter flex flex-col min-h-[100dvh] antialiased text-xs`}
       >
         <ThemeProvider
           attribute='class'

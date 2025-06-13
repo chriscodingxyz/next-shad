@@ -11,11 +11,14 @@ export default function Home () {
         className='self-center'
       /> */}
       <Image
-        src='/images/bw-fine.png'
+        src='/images/pepesky.jpeg'
+        // src='/images/bw-fine.png'
+        // src='/images/pepesky.jpeg'
         height={200}
         width={200}
         alt='This is fine'
-        className='self-center dark:invert'
+        className='self-center'
+        // className='self-center dark:invert'
       />
     </div>
   )
