@@ -1,14 +1,10 @@
 'use client'
 
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, Suspense } from 'react'
 import { useSearchParams, useRouter, usePathname } from 'next/navigation'
 import { toast, Toaster } from 'sonner'
 
-export default function SonnerWrapper ({
-  children
-}: {
-  children: React.ReactNode
-}) {
+function SonnerToastHandler() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const pathname = usePathname()
@@ -49,9 +45,20 @@ export default function SonnerWrapper ({
     }
   }, [searchParams, router, pathname, lastToastId])
 
+  return null
+}
+
+export default function SonnerWrapper ({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
     <>
       {children}
+      <Suspense fallback={null}>
+        <SonnerToastHandler />
+      </Suspense>
       <Toaster />
     </>
   )
