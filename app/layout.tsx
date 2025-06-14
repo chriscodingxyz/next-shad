@@ -30,7 +30,8 @@ const silkScreen = Silkscreen({
 })
 
 const inter = Inter({
-  variable: '--font-inter'
+  variable: '--font-inter',
+  subsets: ['latin']
 })
 
 const jetbrainsMono = JetBrains_Mono({
