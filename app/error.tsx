@@ -5,11 +5,9 @@ import logger from '@/utils/logger'
 import Image from 'next/image'
 
 export default function Error ({
-  error,
-  reset
+  error
 }: {
   error: Error
-  reset: () => void
 }) {
   logger.error(error)
 
