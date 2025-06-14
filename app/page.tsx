@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Button } from '@/components/ui/button'
 import { useState } from 'react'
 import { Copy, Check } from 'lucide-react'
+import logger from '@/utils/logger'
 
 export default function Home () {
   const [copied, setCopied] = useState(false)
@@ -15,7 +16,7 @@ export default function Home () {
       setCopied(true)
       setTimeout(() => setCopied(false), 2000)
     } catch (error) {
-      console.error('Failed to copy:', error)
+      logger.error('Failed to copy:', error)
     }
   }
 
