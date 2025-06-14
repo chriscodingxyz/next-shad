@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono, Silkscreen, Inter } from 'next/font/google'
+import { Geist, Geist_Mono, Silkscreen, Inter, JetBrains_Mono, Poppins, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
@@ -33,6 +33,22 @@ const inter = Inter({
   variable: '--font-inter'
 })
 
+const jetbrainsMono = JetBrains_Mono({
+  variable: '--font-jetbrains-mono',
+  subsets: ['latin']
+})
+
+const poppins = Poppins({
+  variable: '--font-poppins',
+  weight: ['300', '400', '500', '600', '700'],
+  subsets: ['latin']
+})
+
+const spaceGrotesk = Space_Grotesk({
+  variable: '--font-space-grotesk',
+  subsets: ['latin']
+})
+
 export default function RootLayout ({
   children
 }: Readonly<{
@@ -41,7 +57,7 @@ export default function RootLayout ({
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${silkScreen.variable} ${inter.variable} font-inter flex flex-col min-h-[100dvh] antialiased text-xs`}
+        className={`${geistSans.variable} ${geistMono.variable} ${silkScreen.variable} ${inter.variable} ${jetbrainsMono.variable} ${poppins.variable} ${spaceGrotesk.variable} font-space-grotesk flex flex-col min-h-[100dvh] antialiased text-xs`}
       >
         <ThemeProvider
           attribute='class'

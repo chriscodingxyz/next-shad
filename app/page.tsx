@@ -2,23 +2,18 @@ import Image from 'next/image'
 
 export default function Home () {
   return (
-    <div className={`min-h-main flex-center-col`}>
-      {/* <Image
-        src='/images/cryptoadz.gif'
-        height={100}
-        width={100}
-        alt='Cryptoadz'
-        className='self-center'
-      /> */}
+    <div className='min-h-main flex-center-col space-y-6 font-jetbrains-mono'>
+      <div className='text-center space-y-2'>
+        <h1 className='text-3xl font-bold'>Next.js + shadcn/ui</h1>
+        <p className='text-muted-foreground'>Ready to go template</p>
+      </div>
+
       <Image
         src='/images/pepesky.jpeg'
-        // src='/images/bw-fine.png'
-        // src='/images/pepesky.jpeg'
         height={200}
         width={200}
-        alt='This is fine'
+        alt='Next.js shadcn template'
         className='self-center'
-        // className='self-center dark:invert'
       />
     </div>
   )
