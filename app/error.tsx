@@ -3,12 +3,9 @@
 import BackButton from '@/components/buttons/BackButton'
 import logger from '@/utils/logger'
 import Image from 'next/image'
+import bwFineImg from '@/public/images/bw-fine.png'
 
-export default function Error ({
-  error
-}: {
-  error: Error
-}) {
+export default function Error ({ error }: { error: Error }) {
   logger.error(error)
 
   return (
@@ -16,7 +13,7 @@ export default function Error ({
       <h1 className='text-7xl font-black'>Error</h1>
 
       <Image
-        src='/images/bw-fine.png'
+        src={bwFineImg}
         height={200}
         width={200}
         alt='This is fine'

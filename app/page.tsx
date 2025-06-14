@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button'
 import { useState } from 'react'
 import { Copy, Check } from 'lucide-react'
 import logger from '@/utils/logger'
+import pepeImg from '@/public/images/pepesky.jpeg'
 
 export default function Home () {
   const [copied, setCopied] = useState(false)
@@ -29,13 +30,12 @@ export default function Home () {
     <div className='min-h-main flex-center-col space-y-8 font-jetbrains-mono'>
       <div className='flex flex-col items-center space-y-4'>
         <Image
-          src='/images/pepesky.jpeg'
-          height={200}
-          width={200}
+          src={pepeImg}
           alt='Next.js shadcn template'
           className='self-center'
+          width={200}
+          height={200}
         />
-
         <p className='text-muted-foreground'>Ready to go template</p>
 
         <div className='flex items-center gap-3'>
@@ -176,7 +176,7 @@ export default function Home () {
             onClick={handleCopy}
             className='bg-muted/50 border rounded-md px-3 py-2 font-mono text-xs cursor-pointer hover:bg-muted/70 transition-colors flex items-center gap-2 select-none'
           >
-            <span>{cloneCommand.split(' ').slice(0, 2).join(' ') + '...'}</span>
+            <span>git clone ...</span>
             {copied ? (
               <Check className='w-3 h-3 text-green-600 dark:text-green-400' />
             ) : (
