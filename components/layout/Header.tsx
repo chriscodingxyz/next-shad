@@ -11,7 +11,7 @@ import Link from 'next/link'
 
 export default function Header () {
   return (
-    <header className='bg-background fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-[30px] px-4 border-b border-border'>
+    <header className='bg-background fixed top-0 left-0 right-0 z-50 flex justify-between items-center h-[30px] px-4 border-b border-background'>
       <div className='flex items-center gap-2'>
         <Avatar className='h-6 w-6'>
           <AvatarImage src='/images/avatar.png' alt='Avatar' />
